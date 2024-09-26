@@ -49,9 +49,20 @@ VALUES (1, '2024-09-20', 100, 1000, 'em trânsito',
 - Filtrar os pedidos de um cliente em um determinado intervalo de datas.
 
 ```cql
+-- Buscar todos os pedidos de um cliente específico, ordenados pela data.
 SELECT *
 FROM pedidos
 WHERE id_cliente = 1
 ORDER BY (data ASC)
 ```
+
+```cql
+-- Filtrar os pedidos de um cliente em um determinado intervalo de datas.
+SELECT *
+FROM pedidos
+WHERE id_cliente = 1
+AND data >= '2024-09-20'
+AND data <= '2024-09-22'
+```
+
 
