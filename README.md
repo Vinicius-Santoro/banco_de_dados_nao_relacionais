@@ -6,7 +6,7 @@
 
 0.0 Inicie o workspace
 ```cql
-create keyspaces bd_atividade_1;
+create keyspace bd_atividade_1;
 ```
 1.1 Crie uma tabela chamada pedidos para armazenar informações de pedidos de uma loja. A tabela deve incluir:
 - id_cliente (int) como chave de partição.
