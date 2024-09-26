@@ -21,3 +21,23 @@ CREATE TABLE pedidos (
 PRIMARY KEY ((id_cliente), id_pedido)
 )
 ```
+
+1.2 Insira pelo menos 5 registros com diferentes clientes e diferentes datas de  pedidos.
+
+```cql
+-- A coluna id_cliente é a chave de partição, já id_pedido é a chave de clustering.
+
+INSERT INTO pedidos (
+  id_cliente,
+  data,
+  id_pedido,
+  valor,
+  status)
+VALUES (1, '2024-09-20', 100, 1000, 'finalizado',
+        2, '2024-09-21', 200, 2000, 'em trânsito',
+        3, '2024-09-22', 300, 3000, 'em trânsito',
+        4, '2024-09-23', 400, 4000, 'preparando',
+        5, '2024-09-24', 500, 5000, 'em trânsito',
+)
+
+```
