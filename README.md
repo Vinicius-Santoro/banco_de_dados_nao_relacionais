@@ -107,21 +107,48 @@ SET avaliacoes = avaliacoes + [5,5,5]
 WHERE id = 3;
 ```
 
-2.4 Realize uma consulta para exibir as avaliações de um produto específico.
-
-
-
 2.3 Adicione uma nova avaliação a um dos produtos sem substituir as avaliações existentes.
 ```cql
 -- Buscar todos os pedidos de um cliente específico, ordenados pela data.
+UPDATE produtos
+SET avaliacoes = avaliacoes + [2]
+WHERE id = 1;
+```
+
+2.4 Realize uma consulta para exibir as avaliações de um produto específico.
+
+```cql
 SELECT avaliacoes
 FROM produtos
 WHERE id = 1;
 ```
 
+3.1 Crie uma tabela chamada usuarios, com as seguintes colunas:
+- id_usuario (int) como chave primária.
+- nome (text).
+- interesses (SET<text>) para armazenar os interesses únicos de cada usuário.
 
-
-
-SET avaliacoes = avaliacoes + [2]
-WHERE id = 1;
+```cql
+CREATE TABLE usuarios (
+  id_usuario int,
+  nome text,
+  interesses SET text
+PRIMARY KEY (id_usuario)
+);
 ```
+
+3.2 Insira pelo menos 3 usuários com diferentes interesses, como 'futebol', 'cinema', 'leitura'.
+
+```cql
+INSERT INTO usuarios (
+  id_usuario,
+  nome,
+  interesses
+)
+VALUES
+(1, 'Henrique', {'Igreja', 'Estudo', 'Trabalho'),
+(2, 'Cristian', {'CS GO', 'Happy Hour', 'Madero'}),
+(3, 'Vinicius', {'Jogos', 'Filmes', 'Boas festas');
+```
+
+
