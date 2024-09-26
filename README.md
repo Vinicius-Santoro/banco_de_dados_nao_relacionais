@@ -65,4 +65,22 @@ AND data >= '2024-09-20'
 AND data <= '2024-09-22'
 ```
 
+2.1 Crie uma tabela chamada produtos, que incluirá:
+- id (int) como chave primária ou chave de partição.
+- nome (text).
+- avaliacoes (LIST<int>) para armazenar as avaliações dos produtos.
+
+```cql
+-- A coluna id_cliente é a chave de partição, já id_pedido é a chave de clustering.
+
+CREATE TABLE produtos (
+  id int,
+  nome text,
+  avaliacoes LIST int
+PRIMARY KEY (id)
+)
+```
+
+2.2 Insira pelo menos 3 produtos e adicione 3 avaliações diferentes para cada um 
+usando o comando UPDATE.
 
