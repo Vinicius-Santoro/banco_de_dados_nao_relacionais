@@ -107,9 +107,21 @@ SET avaliacoes = avaliacoes + [5,5,5]
 WHERE id = 3;
 ```
 
+2.4 Realize uma consulta para exibir as avaliações de um produto específico.
+
+
+
 2.3 Adicione uma nova avaliação a um dos produtos sem substituir as avaliações existentes.
 ```cql
-UPDATE produtos
+-- Buscar todos os pedidos de um cliente específico, ordenados pela data.
+SELECT avaliacoes
+FROM produtos
+WHERE id = 1;
+```
+
+
+
+
 SET avaliacoes = avaliacoes + [2]
 WHERE id = 1;
 ```
