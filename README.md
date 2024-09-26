@@ -25,19 +25,33 @@ PRIMARY KEY ((id_cliente), id_pedido)
 1.2 Insira pelo menos 5 registros com diferentes clientes e diferentes datas de  pedidos.
 
 ```cql
--- A coluna id_cliente é a chave de partição, já id_pedido é a chave de clustering.
-
 INSERT INTO pedidos (
   id_cliente,
   data,
   id_pedido,
   valor,
   status)
-VALUES (1, '2024-09-20', 100, 1000, 'finalizado',
+VALUES (1, '2024-09-20', 100, 1000, 'em trânsito',
         2, '2024-09-21', 200, 2000, 'em trânsito',
         3, '2024-09-22', 300, 3000, 'em trânsito',
-        4, '2024-09-23', 400, 4000, 'preparando',
+        4, '2024-09-23', 400, 4000, 'em trânsito',
         5, '2024-09-24', 500, 5000, 'em trânsito',
+        1, '2024-09-22', 100, 1000, 'finalizado',
+        2, '2024-09-23', 200, 2000, 'finalizado',
+        3, '2024-09-24', 300, 3000, 'finalizado',
+        4, '2024-09-25', 400, 4000, 'finalizado',
+        5, '2024-09-26', 500, 5000, 'finalizado',
 )
-
 ```
+
+1.3 Execute consultas para:
+- Buscar todos os pedidos de um cliente específico, ordenados pela data.
+- Filtrar os pedidos de um cliente em um determinado intervalo de datas.
+
+```cql
+SELECT *
+FROM pedidos
+WHERE id_cliente = 1
+ORDER BY (data ASC)
+```
+
