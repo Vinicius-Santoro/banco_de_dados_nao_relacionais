@@ -1,6 +1,13 @@
 ### Atividade 1 | Banco de Dados Não Relacionais
 
+- Repositório para docuementar a primeira atividade de banco de dados não relacionais.
 
+### Primeiros passos
+
+0.0 Inicie o workspace
+```cql
+create keyspaces;
+```
 1.1 Crie uma tabela chamada pedidos para armazenar informações de pedidos de uma loja. A tabela deve incluir:
 - id_cliente (int) como chave de partição.
 - data (timestamp) como chave de clustering para ordenar os pedidos pela data.
@@ -146,9 +153,14 @@ INSERT INTO usuarios (
   interesses
 )
 VALUES
-(1, 'Henrique', {'Igreja', 'Estudo', 'Trabalho'),
+(1, 'Henrique', {'Igreja', 'Estudo', 'Trabalho'}),
 (2, 'Cristian', {'CS GO', 'Happy Hour', 'Madero'}),
-(3, 'Vinicius', {'Jogos', 'Filmes', 'Boas festas');
+(3, 'Vinicius', {'Jogos', 'Filmes', 'Boas festas'});
 ```
 
+3.3 Adicione um novo interesse para um dos usuários.
+```cql
+UPDATE usuarios SET interesses = interesses + {'Chocolate'}
+WHERE id = 2;
+```
 
