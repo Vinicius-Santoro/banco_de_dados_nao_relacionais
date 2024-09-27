@@ -1,12 +1,12 @@
 ### Atividade 1 | Banco de Dados Não Relacionais
 
-- Repositório para docuementar a primeira atividade de banco de dados não relacionais.
+- Repositório para documentar a primeira atividade de banco de dados não relacionais.
 
 ### Primeiros passos
 
 0.0 Inicie o workspace
 ```cql
-create keyspace bd_atividade_1;
+CREATE KEYSPACE bd_atividade;
 ```
 1.1 Crie uma tabela chamada pedidos para armazenar informações de pedidos de uma loja. A tabela deve incluir:
 - id_cliente (int) como chave de partição.
