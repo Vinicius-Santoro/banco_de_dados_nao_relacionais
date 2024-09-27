@@ -24,7 +24,7 @@ CREATE TABLE pedidos (
   id_pedido int,
   valor float,
   status text,
-PRIMARY KEY ((id_cliente), data )
+PRIMARY KEY ((id_cliente), data)
 );
 ```
 
