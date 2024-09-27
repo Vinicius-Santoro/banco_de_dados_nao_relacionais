@@ -7,6 +7,7 @@
 0.0 Inicie o workspace
 ```cql
 CREATE KEYSPACE bd_atividade;
+use db_name_teste;
 ```
 1.1 Crie uma tabela chamada pedidos para armazenar informações de pedidos de uma loja. A tabela deve incluir:
 - id_cliente (int) como chave de partição.
@@ -45,7 +46,7 @@ VALUES (1, '2024-09-20', 100, 1000, 'em trânsito'),
       (2, '2024-09-23', 200, 2000, 'finalizado'),
       (3, '2024-09-24', 300, 3000, 'finalizado'),
       (4, '2024-09-25', 400, 4000, 'finalizado'),
-      (5, '2024-09-26', 500, 5000, 'finalizado'),
+      (5, '2024-09-26', 500, 5000, 'finalizado')
 );
 ```
 
