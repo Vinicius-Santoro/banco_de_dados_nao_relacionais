@@ -91,7 +91,7 @@ usando o comando UPDATE.
 
 ```cql
 -- Insira pelo menos 3 produtos
-INSERT INTO pedidos (
+INSERT INTO produtos (
   id,
   nome
 )
