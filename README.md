@@ -81,7 +81,7 @@ AND data <= '2024-09-22';
 CREATE TABLE produtos (
   id int,
   nome text,
-  avaliacoes LIST int,
+  avaliacoes LIST <int>,
 PRIMARY KEY (id)
 );
 ```
