@@ -91,43 +91,28 @@ usando o comando UPDATE.
 
 ```cql
 -- Insira pelo menos 3 produtos
-INSERT INTO produtos (
-  id,
-  nome
-)
-VALUES
-(1, "Oreo"),
-(2, "Bono"),
-(3, "Nesfit");
+INSERT INTO produtos (id,nome) VALUES (1, 'Oreo');
+INSERT INTO produtos (id,nome) VALUES (2, 'Bono');
+INSERT INTO produtos (id,nome) VALUES (3, 'Nesfit');
 ```
 
 ```cql
 -- adicione 3 avaliações diferentes para cada um usando o comando UPDATE.
-UPDATE produtos
-SET avaliacoes = avaliacoes + [4,5,5]
-WHERE id = 1;
-UPDATE produtos
-SET avaliacoes = avaliacoes + [1,2,2]
-WHERE id = 2;
-UPDATE produtos
-SET avaliacoes = avaliacoes + [5,5,5]
-WHERE id = 3;
+UPDATE produtos SET avaliacoes = avaliacoes + [4,5,5] WHERE id = 1;
+UPDATE produtos SET avaliacoes = avaliacoes + [1,2,2] WHERE id = 2;
+UPDATE produtos SET avaliacoes = avaliacoes + [5,5,5] WHERE id = 3;
 ```
 
 2.3 Adicione uma nova avaliação a um dos produtos sem substituir as avaliações existentes.
 ```cql
 -- Buscar todos os pedidos de um cliente específico, ordenados pela data.
-UPDATE produtos
-SET avaliacoes = avaliacoes + [2]
-WHERE id = 1;
+UPDATE produtos SET avaliacoes = avaliacoes + [2] WHERE id = 1;
 ```
 
 2.4 Realize uma consulta para exibir as avaliações de um produto específico.
 
 ```cql
-SELECT avaliacoes
-FROM produtos
-WHERE id = 1;
+SELECT avaliacoes FROM produtos WHERE id = 1;
 ```
 
 3.1 Crie uma tabela chamada usuarios, com as seguintes colunas:
@@ -136,31 +121,19 @@ WHERE id = 1;
 - interesses (SET<text>) para armazenar os interesses únicos de cada usuário.
 
 ```cql
-CREATE TABLE usuarios (
-  id_usuario int,
-  nome text,
-  interesses SET text
-PRIMARY KEY (id_usuario)
-);
+CREATE TABLE usuarios (id_usuario int,nome text,interesses SET <text>, PRIMARY KEY (id_usuario));
 ```
 
 3.2 Insira pelo menos 3 usuários com diferentes interesses, como 'futebol', 'cinema', 'leitura'.
 
 ```cql
-INSERT INTO usuarios (
-  id_usuario,
-  nome,
-  interesses
-)
-VALUES
-(1, 'Henrique', {'Igreja', 'Estudo', 'Trabalho'}),
-(2, 'Cristian', {'CS GO', 'Happy Hour', 'Madero'}),
-(3, 'Vinicius', {'Jogos', 'Filmes', 'Boas festas'});
+INSERT INTO usuarios (id_usuario,nome,interesses) VALUES (1, 'Henrique', {'Igreja', 'Estudo', 'Trabalho'});
+INSERT INTO usuarios (id_usuario,nome,interesses) VALUES (2, 'Cristian', {'CS GO', 'Happy Hour', 'Madero'});
+INSERT INTO usuarios (id_usuario,nome,interesses) VALUES (3, 'Vinicius', {'Jogos', 'Filmes', 'Boas festas'});
 ```
 
 3.3 Adicione um novo interesse para um dos usuários.
 ```cql
-UPDATE usuarios SET interesses = interesses + {'Chocolate'}
-WHERE id = 2;
+UPDATE usuarios SET interesses = interesses + {'Chocolate'} WHERE id_usuario = 2;
 ```
 
