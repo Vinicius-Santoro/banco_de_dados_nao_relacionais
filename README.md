@@ -32,15 +32,15 @@ PRIMARY KEY ((id_cliente), data)
 
 ```cql
 INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) VALUES (1, '2024-09-20', 100, 1000, 'em trânsito');
-INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) (2, '2024-09-21', 200, 2000, 'em trânsito');
-INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) (3, '2024-09-22', 300, 3000, 'em trânsito');
-INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) (4, '2024-09-23', 400, 4000, 'em trânsito');
-INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) (5, '2024-09-24', 500, 5000, 'em trânsito');
-INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) (1, '2024-09-22', 100, 1000, 'finalizado');
-INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) (2, '2024-09-23', 200, 2000, 'finalizado');
-INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) (3, '2024-09-24', 300, 3000, 'finalizado');
-INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) (4, '2024-09-25', 400, 4000, 'finalizado');
-INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) (5, '2024-09-26', 500, 5000, 'finalizado');
+INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) VALUES (2, '2024-09-21', 200, 2000, 'em trânsito');
+INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) VALUES (3, '2024-09-22', 300, 3000, 'em trânsito');
+INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) VALUES (4, '2024-09-23', 400, 4000, 'em trânsito');
+INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) VALUES (5, '2024-09-24', 500, 5000, 'em trânsito');
+INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) VALUES (1, '2024-09-22', 100, 1000, 'finalizado');
+INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) VALUES (2, '2024-09-23', 200, 2000, 'finalizado');
+INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) VALUES (3, '2024-09-24', 300, 3000, 'finalizado');
+INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) VALUES (4, '2024-09-25', 400, 4000, 'finalizado');
+INSERT INTO pedidos (id_cliente,data,id_pedido,valor,status) VALUES (5, '2024-09-26', 500, 5000, 'finalizado');
 ```
 
 1.3 Execute consultas para:
